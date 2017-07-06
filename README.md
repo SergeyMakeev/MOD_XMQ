@@ -5,10 +5,12 @@ ejabberd module to support **XMQ** protocol.
 **XMQ** is a custom extension for XMPP protocol to provide message broker features.
 Supports two types of queues:
 
-    * ALL. The message will receive by all clients subscribing to specified topic.
-      similar to [XEP-0060: Publish-Subscribe](https://xmpp.org/extensions/xep-0060.html)
-    * ANY. The message will receive by any client subscribing to specified topic.
-      similar to [XEP-0354: Customizable Message Routing](https://xmpp.org/extensions/xep-0354.html) 
+- **ALL**. The message will receive by all clients subscribing to specified topic.
+  Similar to [XEP-0060: Publish-Subscribe](https://xmpp.org/extensions/xep-0060.html)
+         
+- **ANY**. The message will receive by any client subscribing to specified topic.
+  Similar to [XEP-0354: Customizable Message Routing](https://xmpp.org/extensions/xep-0354.html) 
+
 
 Here is the simple example of configuration file ejabberd.yml
 ```
