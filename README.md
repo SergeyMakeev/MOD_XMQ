@@ -34,7 +34,7 @@ ttl - Specifies the lifetime of the subscription in seconds.
 load - Specifies the load of current client. Useful for load balancing in future.
        In the current implementation, the client does not receive any messages from queue
        if its load factor is greater than 90
-```
+```XML
 <iq type='set'
     id='id1'
     to='queue1.localhost'
@@ -49,19 +49,19 @@ load - Specifies the load of current client. Useful for load balancing in future
 
 
 Example of a command to delete a subscription.
-```
+```XML
 <iq type='set'
     id='id2'
     to='queue1.localhost'
     from='user@sm-localhost/desktop' >
   <xmq xmlns='xmq:command'
        command='del'
-       topic='topic'
+       topic='topic'/>
 </iq>
 ```
 
 Example of Message with specified **XMQ** topic.
-```
+```XML
 <message type='chat'
          to='queue1.localhost'
          from='user@sm-localhost/desktop' >
@@ -74,7 +74,7 @@ Example of Message with specified **XMQ** topic.
 ```
 
 Example of IQ with specified **XMQ** topic.
-```
+```XML
 <iq type='get'
     id='id3'
     to='queue1.localhost'
