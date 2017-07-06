@@ -29,11 +29,9 @@ modules:
 
 Example of a subscription command.
 
-ttl - Specifies the lifetime of the subscription in seconds.
-      The subscription will automatically expire according to the ttl parameter.
-load - Specifies the load of current client. Useful for load balancing in future.
-       In the current implementation, the client does not receive any messages from queue
-       if its load factor is greater than 90
+- **ttl** Specifies the lifetime of the subscription in seconds.
+  The subscription will automatically expire according to the ttl parameter.
+- **load** Specifies the load of current client. In the current implementation, the client does not receive any messages from queue if its load factor is greater than 90. Useful for load balancing in future.
 ```XML
 <iq type='set'
     id='id1'
