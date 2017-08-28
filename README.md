@@ -1,6 +1,7 @@
 ## About
 
 ejabberd module to support **XMQ** protocol.
+Compile using erlang shell command c(mod_xmq).
 
 **XMQ** is a custom extension for XMPP protocol to provide message broker features.
 Supports two types of queues:

@@ -147,13 +147,22 @@ c2s_closed(#{sid := _SID, sockmod := _SockMod, socket := _Socket,
              jid := JID, user := _U, server := S, resource := _R} = State, _Reason) ->
     ?DEBUG("mod_xmq: c2s_closed jid: ~p ~p", [JID, S]),
     remove_consumer(S, JID),
+    State;
+c2s_closed(State, Reason) ->
+    ?DEBUG("mod_xmq: c2s_closed: ~p ~p", [State, Reason]),
     State.
+
 
 c2s_terminated(#{sid := _SID, sockmod := _SockMod, socket := _Socket,
                  jid := JID, user := _U, server := S, resource := _R} = State, _Reason) ->
     ?DEBUG("mod_xmq: c2s_terminated jid: ~p ~p", [JID, S]),
     remove_consumer(S, JID),
+    State;
+c2s_terminated(State, Reason) ->
+    ?DEBUG("mod_xmq: c2s_terminated: ~p ~p", [State, Reason]),
     State.
+
+
 
 
 %%% execute xmq command
